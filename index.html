@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="script.js" />
+    
   </head>
   <body class="bg-gray-50">
     <!-- ================= HEADER / NAVBAR SECTION ================= -->
@@ -28,7 +28,7 @@
         <div class="flex flex-wrap items-center justify-between gap-4">
           <!-- Logo -->
           <div>
-            <img src="assets/assets/Layout/Brand/logo-colored.png" alt="" />
+            <a href="index.html"><img src="assets/assets/Layout/Brand/logo-colored.png" alt="" /></a>
           </div>
 
           <!-- Search bar -->
@@ -36,10 +36,10 @@
             <input
               type="text"
               placeholder="Search products..."
-              class="w-full border border-gray-300 px-4 py-2 rounded-l-lg focus:outline-none focus:border-blue-500"
+              class="w-full border border-gray-300 px-4 py-2 rounded-l-lg focus:outline-none focus:border-blue-500 hidden md:block"
             />
             <select
-              class="border-t border-b border-r border-gray-300 px-3 bg-gray-50 text-sm"
+              class="border-t border-b border-r border-gray-300 px-3 bg-gray-50 text-sm hidden md:block"
             >
               <option>All category</option>
               <option>Electronics</option>
@@ -47,7 +47,7 @@
               <option>Home</option>
             </select>
             <button
-              class="bg-blue-600 text-white px-6 rounded-r-lg hover:bg-blue-700 transition"
+              class="bg-blue-600 text-white px-6 rounded-r-lg hover:bg-blue-700 transition hidden md:block"
             >
               Search
             </button>
@@ -73,13 +73,14 @@
                   width="24"
                   height="24"
                   fill="currentColor"
+                  class="hidden lg:block"
                 >
                   <path
                     d="M6.45455 19L2 22.5V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V18C22 18.5523 21.5523 19 21 19H6.45455ZM5.76282 17H20V5H4V18.3851L5.76282 17ZM11 10H13V12H11V10ZM7 10H9V12H7V10ZM15 10H17V12H15V10Z"
                   ></path>
                 </svg>
               </div>
-              <div class="hidden sm:block">Message</div>
+              <div class="hidden lg:block">Message</div>
             </div>
             <div class="text-center cursor-pointer hover:text-blue-600">
               <div class="text-xl ml-1 mb-1">
@@ -89,17 +90,18 @@
                   width="24"
                   height="24"
                   fill="currentColor"
+                  class="hidden lg:block"
                 >
                   <path
                     d="M2 8.5C2 5.46243 4.46243 3 7.5 3C9.36016 3 11.0046 3.92345 12 5.33692C12.9954 3.92345 14.6398 3 16.5 3C19.5376 3 22 5.46243 22 8.5C22 16 11.9999 21.4852 11.9999 21.4852C11.9999 21.4852 2 16 2 8.5Z"
                   ></path>
                 </svg>
               </div>
-              <div class="hidden sm:block">Orders</div>
+              <div class="hidden lg:block">Orders</div>
             </div>
             <div class="text-center cursor-pointer hover:text-blue-600">
               <div class="text-xl ml-1 mb-1">
-                <svg
+                <a href="cart.html"><svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   width="24"
@@ -111,8 +113,34 @@
                   ></path>
                 </svg>
               </div>
-              <div class="hidden sm:block">Cart</div>
+              <div class="hidden sm:block">Cart</div></a>
             </div>
+          </div>
+          <div class="relative w-full max-w-full block md:hidden">
+            <!-- Icon -->
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35m1.85-5.65a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              placeholder="Search products..."
+              class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-blue-50"
+            />
           </div>
         </div>
       </div>
@@ -123,13 +151,13 @@
           class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-between items-center gap-3"
         >
           <div class="flex flex-wrap gap-6 text-md">
-            <button class="font-semibold hover:text-blue-600">
+            <a class="font-semibold hover:text-blue-600" href="category.html">
               <span class="pr-2">☰</span> All category
-            </button>
-            <a href="#" class="hover:text-blue-600">Hot offers</a>
-            <a href="#" class="hover:text-blue-600">Gift boxes</a>
-            <a href="#" class="hover:text-blue-600">Projects</a>
-            <a href="#" class="hover:text-blue-600">Menu item</a>
+            </a>
+            <a href="category.html" class="hover:text-blue-600">Hot offers</a>
+            <a href="category.html" class="hover:text-blue-600">Gift boxes</a>
+            <a href="product.html" class="hover:text-blue-600">Projects</a>
+            <a href="product.html" class="hover:text-blue-600">Menu item</a>
             <a href="#" class="hover:text-blue-600">
               <div class="flex items-center gap-1">
                 Help
@@ -149,7 +177,7 @@
           </div>
           <div class="flex gap-4 text-sm">
             <div class="flex items-center gap-1">
-              <span class="cursor-pointer hover:text-blue-600"
+              <span class="cursor-pointer hover:text-blue-600 hidden lg:block"
                 >English, USD</span
               >
               <svg
@@ -158,6 +186,7 @@
                 width="16"
                 height="16"
                 fill="currentColor"
+                class="hidden lg:block"
               >
                 <path
                   d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"
@@ -165,10 +194,13 @@
               </svg>
             </div>
             <div class="flex items-center gap-1">
-              <span class="cursor-pointer hover:text-blue-600">Ship to</span>
+              <span class="cursor-pointer hover:text-blue-600 hidden lg:block"
+                >Ship to</span
+              >
               <img
                 src="assets/assets/Layout1/Image/flags/DE@2x.png"
                 alt="flag"
+                class="hidden lg:block"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,6 +208,7 @@
                 width="16"
                 height="16"
                 fill="currentColor"
+                class="hidden lg:block"
               >
                 <path
                   d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"
@@ -193,10 +226,56 @@
       <section class="py-6">
         <div class="bg-white rounded-lg shadow-sm overflow-hidden">
           <div class="p-1 sm:p-2">
-            <div class="grid grid-cols-1 md:grid-cols-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
               <!-- LEFT: Categories Sidebar -->
-              <div class="md:col-span-3 bg-white rounded-l-lg">
-                <ul class="py-2">
+              <!-- LEFT: Categories Sidebar - Responsive (Chips on mobile, List on desktop) -->
+              <div class="lg:col-span-3 bg-white rounded-l-lg">
+                <!-- Mobile View: Horizontal Scrollable Chips (visible only on mobile) -->
+                <div
+                  class="block lg:hidden overflow-x-auto whitespace-nowrap py-3 px-2 scrollbar-hide"
+                >
+                  <div class="inline-flex gap-2">
+                    <span
+                      class="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-md text-sm font-medium"
+                      >Automobiles</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Clothes and wear</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Home interiors</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Computer and tech</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Tools, equipments</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Sports and outdoor</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Animal and pets</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >Machinery tools</span
+                    >
+                    <span
+                      class="inline-block bg-gray-100 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 cursor-pointer"
+                      >More category →</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Desktop View: Vertical List (visible only on md and above) -->
+                <ul class="hidden lg:block py-2">
                   <li class="bg-blue-50 mx-2 rounded-lg text-gray-700">
                     <div class="px-4 py-3 font-medium">Automobiles</div>
                   </li>
@@ -224,7 +303,10 @@
                   <li
                     class="hover:bg-gray-50 px-4 py-2.5 cursor-pointer font-medium"
                   >
-                    More category <span class="text-xl text-blue-600">→</span>
+                    <a href="category.html"
+                      >More category
+                      <span class="text-xl text-blue-600">→</span></a
+                    >
                   </li>
                 </ul>
               </div>
@@ -260,7 +342,7 @@
               </div>
 
               <!-- RIGHT: User Cards -->
-              <div class="md:col-span-3 rounded-r-lg p-4 space-y-3">
+              <div class="lg:col-span-3 rounded-r-lg p-4 space-y-3">
                 <!-- User card -->
                 <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
                   <div class="flex items-center mb-3">
@@ -453,11 +535,13 @@
                 Outdoor
               </h2>
 
-              <button
+              <a href="category.html">
+                <button
                 class="mt-4 bg-white px-4 py-2 rounded-md shadow text-sm font-medium"
               >
                 Source now
               </button>
+              </a>
             </div>
 
             <!-- RIGHT SIDE PRODUCTS -->
@@ -599,11 +683,13 @@
                 Gadgets
               </h2>
 
-              <button
+              <a href="category.html">
+                <button
                 class="mt-4 bg-white px-4 py-2 rounded-md shadow text-sm font-medium"
               >
                 Source now
               </button>
+              </a>
             </div>
 
             <!-- RIGHT SIDE PRODUCTS -->
@@ -807,10 +893,10 @@
       <section class="py-4">
         <h2 class="text-2xl font-bold mb-4">Recommended items</h2>
         <div
-          class="grid grid-cols-2 py-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+          class="grid grid-cols-2 py-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 "
         >
           <div
-            class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
+            class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition "
           >
             <div class="h-32 rounded flex items-center justify-center text-4xl">
               <img
@@ -823,6 +909,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -838,6 +941,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -853,6 +973,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -868,6 +1005,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -883,6 +1037,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -898,6 +1069,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -913,6 +1101,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -928,6 +1133,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -943,6 +1165,23 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
           <div
             class="bg-white py-8 px-4 rounded-lg border hover:shadow-lg transition"
@@ -958,8 +1197,32 @@
             <p class="text-sm text-gray-500">
               T-shirts with multiple colors, for men
             </p>
+            <button
+              class="move-to-cart mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white text-blue-600 text-sm font-medium hover:bg-blue-50 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"
+                ></path>
+              </svg>
+              Move to cart
+            </button>
           </div>
         </div>
+        <!-- Snackbar -->
+    <div
+    id="snackbar"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-20 opacity-0 bg-gray-900 text-white px-5 py-3 rounded-lg shadow-lg transition-all duration-300 z-50"
+  >
+    Item moved to cart
+  </div>
       </section>
       <!-- SERVICES + SUPPLIERS -->
       <section class="pb-2 pt-0">
@@ -1412,5 +1675,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
